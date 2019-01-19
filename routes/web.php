@@ -11,6 +11,7 @@
 |
 */
 Route::get('/','HomeController@index');
+
 Route::group(['namespace'=>'Cool'], function () {
     Route::get('cool','TestController@index');
 });
