@@ -19,9 +19,7 @@ Route::get('/','HomeController@index');
 
 Route::pattern('student_no','s[0-9]{10}');
 Route::group(['prefix'=>'student'], function () {
-    Route::get('{student_no}',['as'=>'student','uses'=>function ($student_no) {
-        return "學號:" . $student_no;
-    }
+    Route::get('{student_no}',['as'=>'student','uses'=>'StudentController@getStudentData'
     ]);
 
     Route::get('{student_no}/score/{subject?}',['as'=>'student.score','uses'=>function($student_no,$subject=null) {
