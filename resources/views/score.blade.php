@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         <p>
-            學號：{{ Sstudent_no }}
+            學號：{{ $student_no }}
         </p>
         <p>
             姓名：小明
